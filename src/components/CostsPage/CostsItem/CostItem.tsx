@@ -102,7 +102,7 @@ export const CostItem = ({ cost, index }: ICostsItemProps) => {
     className= "cost-item list-group-item d-flex justify-content-between align-items-center"
       id={cost._id as string}>
       <div className="cost-item-left">
-        <span>{index} {t('shop')}</span>
+        <span>{index}</span>
         {edit ?
           <input
             ref={textRef}
@@ -129,7 +129,7 @@ export const CostItem = ({ cost, index }: ICostsItemProps) => {
             ref={priceRef}
             onChange={handleChangePrice}
             value={newPrice}
-            type='text'
+            type='number'
             className="form-control cost-item__price-input" /> :
           <span style={{ marginRight: '10px' }} >{t('amount')} {cost.price} </span>
         }

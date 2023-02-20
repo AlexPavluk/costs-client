@@ -82,7 +82,7 @@ const Header = ({ costs }: ICostsHederProps) => {
                     <input
                         ref={priceRef}
                         className="form-control"
-                        type="text" />
+                        type="number" />
                 </div>
                 <div className="form-item">
                     <span className="mb-3">
