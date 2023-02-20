@@ -1,0 +1,39 @@
+{
+    "title": "Учет моих расходов",
+    "dont-havecosts": "Список рассходов пуст",
+    "valuts": "грн",
+    
+    "shop-input": "Куда было потрачено:",
+    "price-input": "Сколько было потрачено:",
+    "date-input": "Когда было потрачено:",
+    "name-input":"Введите свое имя",
+    "password-input":"Введите свой пароль",
+    "all-inputs-warn":"Заполните все поля",
+    "passw-inputs-warn":"Пароль должен содержать больше 4 символов",
+
+    "login-alert":"Вход выполнен",
+    "reg-alert":"Регистрация выполненна",
+    "delete-cost-alert":"Успешно удалено!",
+    "update-cost-alert":"Рассход обнавлен",
+    "create-cost-alert":"Успешно создано!",
+
+    "totalt-mount":"Итого:",
+   
+    "btn-logout":"Выйти",
+    "btn-add-cost": "Добавить",
+    "btn-edit": "Изменить",
+    "btn-save": "Сохранить",
+    "cansel-btn": "Отменить",
+    "login-btn": "Войти",
+    "register-btn": "За регистрироваться  ",
+
+    "shop": "Магазин",
+    "date": "Дата",
+    "amount": "Сумма",
+
+    "register-title": "Регистрация",
+    "login-title": "Войти",
+
+    "login-ask":"Еще нет аккаунтa?",
+    "register-ask":"У вас уже аккаунт?"
+}

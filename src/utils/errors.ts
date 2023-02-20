@@ -1,5 +1,6 @@
 import { AxiosError } from "axios";
 import { createCostsFx, deleteCostsFx, getCostsFx, refreshTokenFx, updateCostsFx } from "../api/costsClient";
+import i18next from "i18next"
 import { createCosts, setCosts, updateCosts } from "../context";
 import { ICosts, IHandleAxiosErrorPayload } from "../types";
 import { getAuthDataFromLS, handleAlertMessage, removeUser } from "./authAlert";
@@ -8,7 +9,6 @@ export const handleAxiosError = async (
     error: unknown,
     payload: IHandleAxiosErrorPayload | null = null
 ) => {
-    console.log((error as AxiosError));
     const errorMessage = 
         ((error as AxiosError).response?.data as { message: string }).message ||
         ((error as AxiosError).response?.data as { error: string }).error;
@@ -48,7 +48,7 @@ export const handleAxiosError = async (
                         }
 
                         createCosts(cost);
-                        handleAlertMessage({alertText: 'Успешно создано', alertStatus: 'success'});
+                        handleAlertMessage({alertText: i18next.t("create-cost-alert"), alertStatus: 'success'});
                         break;
                         case 'update':
                             const updateCost = await updateCostsFx({
@@ -63,7 +63,7 @@ export const handleAxiosError = async (
                             }
     
                             updateCosts(updateCost);
-                            handleAlertMessage({alertText: 'Успешно создано', alertStatus: 'success'});
+                            handleAlertMessage({alertText: i18next.t("create-cost-alert"), alertStatus: 'success'});
                             break;
                         case 'delete':
                          await deleteCostsFx({

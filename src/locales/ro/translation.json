@@ -1,0 +1,37 @@
+{
+    "title": "Contabilitatea cheltuielilor mele",
+    "dont-havecosts": "Nu există costuri",
+    "valuts": "grn",
+    
+    "shop-input": "Unde a fost cheltuit:",
+    "price-input": "Cât de mult a fost cheltuit:",
+    "date-input": "Când a fost cheltuit:",
+    "name-input":"Introduceți numele dvs.",
+    "password-input":"Introduceți parola dvs",
+    "all-inputs-warn":"Completați toate câmpurile",
+    "passw-inputs-warn":"Parola trebuie să aibă mai mult de 4 caractere",
+    "update-cost-alert":"Debitul este expus",
+    "login-alert":"Intrarea se face",
+    "reg-alert":"Înregistrare completă",
+    "create-cost-alert":"Stabilit cu succes!",
+    "delete-cost-alert":"Șters cu succes!",
+    "totalt-mount":"Total:",
+   
+    "btn-logout":"log out",
+    "btn-add-cost": "Adăugați",
+    "btn-edit": "Schimbare",
+    "btn-save": "Schimbare",
+    "cansel-btn": "Anulează",
+    "login-btn": "Autentificare",
+    "register-btn": "Pentru a vă înregistra",
+    
+    "shop": "Magazin",
+    "date": "Data",
+    "amount": "Suma",
+
+    "register-title": "Registrul",
+    "login-title": "Autentificare",
+
+    "login-ask":"Nu aveți încă un cont?",
+    "register-ask":"Aveți deja un cont?"
+}

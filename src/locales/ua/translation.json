@@ -1,0 +1,38 @@
+{
+    "title": "Облік моїх витрат",
+    "dont-havecosts": "Витрат не має",
+    "valuts": "грн",
+    
+    "shop-input": "Куди було витрачено:",
+    "price-input": "Скільки було витрачено:",
+    "date-input": "Коли було витрачено:",
+
+    "totalt-mount":"Загалом:",
+   
+    "btn-logout":"Вийти",
+    "btn-add-cost": "Додати",
+    "btn-edit": "Змінити",
+    "btn-save": "Зберегти",
+    "cansel-btn": "Відмінити",
+    "login-btn": "Увійти",
+    "register-btn": "За реєструватися ",
+    "name-input":"Введіть свій пароль",
+    "password-input":"Введіть свій пароль",
+    "all-inputs-warn":"Заповніть усі поля",
+    "passw-inputs-warn":"Пароль повинен містити більше 4 символів",
+    "update-cost-alert":"Розхід оголений",
+    "login-alert":"Вхід виконано",
+    "reg-alert":"Реєстрацію виконано",
+    "create-cost-alert":"Успішно створено!",
+    "delete-cost-alert":"Успішно видалено!",
+    
+    "shop": "Мгазин",
+    "date": "Дата",
+    "amount": "Сума",
+
+    "register-title": "Регістрація",
+    "login-title": "Увійти",
+
+    "login-ask":"Ще не маєте акаун",
+    "register-ask":"У вас вже є акаунт?"
+}

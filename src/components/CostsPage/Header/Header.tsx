@@ -1,5 +1,6 @@
 import { useStore } from "effector-react";
 import {MutableRefObject, useEffect, useRef, useState} from "react"
+import { useTranslation } from "react-i18next";
 import { createCostsFx } from "../../../api/costsClient";
 import { $totalPrice, createCosts } from "../../../context";
 import { ICostsHederProps } from "../../../types";
@@ -10,6 +11,7 @@ import { Spinner } from "../../Spiner/Spiner"
 import './style.scss'
 
 const Header = ({ costs }: ICostsHederProps) => {
+    const {t} = useTranslation();
     const [spinner, setSpinner] = useState(false);
     const textRef = useRef() as MutableRefObject<HTMLInputElement>
     const priceRef = useRef() as MutableRefObject<HTMLInputElement>
@@ -56,7 +58,7 @@ const Header = ({ costs }: ICostsHederProps) => {
 
         setSpinner(false);
         createCosts(cost);
-        handleAlertMessage({alertText: 'Успешно создано', alertStatus: 'success'})
+        handleAlertMessage({alertText: <span>{t('create-cost-alert')}</span>, alertStatus: 'success'})
     }
 
     
@@ -66,7 +68,7 @@ const Header = ({ costs }: ICostsHederProps) => {
             <form className="d-flex mb-3" onSubmit={formSabmit}>
                 <div className="form-item">
                     <span className="mb-3">
-                        Куда было потрачено:
+                        {t('shop-input')}
                     </span>
                     <input
                         ref={textRef}
@@ -75,7 +77,7 @@ const Header = ({ costs }: ICostsHederProps) => {
                 </div>
                 <div className="form-item">
                     <span className="mb-3">
-                        Сколько было потрачено:
+                        {t('price-input')}
                     </span>
                     <input
                         ref={priceRef}
@@ -84,7 +86,7 @@ const Header = ({ costs }: ICostsHederProps) => {
                 </div>
                 <div className="form-item">
                     <span className="mb-3">
-                        Когда было потрачено:
+                        {t('date-input')}
                     </span>
                     <input
                         ref={dateRef}
@@ -92,13 +94,13 @@ const Header = ({ costs }: ICostsHederProps) => {
                         type="date" />
                 </div>
                 <button className='btn btn-primary add-btn'>
-                    {spinner ? <Spinner top={5} left={20} /> : 'Добавить'}
+                    {spinner ? <Spinner top={5} left={20} /> : <span>{t('btn-add-cost')}</span>}
                 </button>
             </form>
             <div style={{ textAlign: 'end', marginBottom: 10 }}>
-                Итого:
+                {t('totalt-mount')}
                 <span>{isNaN(parseInt(String(totalPrice))) ? 0 : parseInt(String(totalPrice))}</span>
-                гнр.
+                {t('valuts')}.
             </div>
         </div>
     )

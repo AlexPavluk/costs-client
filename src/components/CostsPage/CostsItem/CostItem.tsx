@@ -7,10 +7,12 @@ import { removeCosts, updateCosts } from "../../../context"
 import { Spinner } from "../../Spiner/Spiner"
 import { validationInputs } from "../../../utils/validationInputs"
 import './styles.scss'
+import { useTranslation } from "react-i18next"
 
 export const CostItem = ({ cost, index }: ICostsItemProps) => {
   const date = dayjs(cost.data).format('DD.MM.YYYY');
 
+  const {t} = useTranslation();
   const [edit, setEdit] = useState(false)
   const [deleteSpinner, setDeleteSpinner] = useState(false)
   const [editSpinner, setEditSpinner] = useState(false)
@@ -44,7 +46,7 @@ export const CostItem = ({ cost, index }: ICostsItemProps) => {
 
     setDeleteSpinner(false);
     removeCosts(cost._id as string);
-    handleAlertMessage({ alertText: 'Успешно удалено!', alertStatus: 'success' })
+    handleAlertMessage({ alertText: <span>{t('delete-cost-alert')}</span>, alertStatus: 'success' })
 
   }
 
@@ -93,14 +95,14 @@ export const CostItem = ({ cost, index }: ICostsItemProps) => {
     setEdit(false)
     setEditSpinner(false);
     updateCosts(editerCost);
-    handleAlertMessage({ alertText: 'Рассход обнавлен', alertStatus: 'success' })
+    handleAlertMessage({ alertText: <span>{t('update-cost-alert')}</span>, alertStatus: 'success' })
   }
   return (
     <li 
     className= "cost-item list-group-item d-flex justify-content-between align-items-center"
       id={cost._id as string}>
       <div className="cost-item-left">
-        <span>{index} Магазин</span>
+        <span>{index} {t('shop')}</span>
         {edit ?
           <input
             ref={textRef}
@@ -118,7 +120,7 @@ export const CostItem = ({ cost, index }: ICostsItemProps) => {
             value={new Date(newDate).toISOString().split('T')[0]}
             type='date'
             className="form-control cost-item__date-input" /> :
-          <span className="data"><> Дата {date}</></span>
+          <span className="data"><> {t('date')} {date}</></span>
         }
       </div>
       <div className="cost-item-right d-flex align-items-center">
@@ -129,18 +131,18 @@ export const CostItem = ({ cost, index }: ICostsItemProps) => {
             value={newPrice}
             type='text'
             className="form-control cost-item__price-input" /> :
-          <span style={{ marginRight: '10px' }} >Сумма {cost.price} </span>
+          <span style={{ marginRight: '10px' }} >{t('amount')} {cost.price} </span>
         }
         {edit ?
           <div className="btn-block__inner">
             <button className="btn save-btn btn-success">
-              {editSpinner ? <Spinner top={5} left={38} /> : <span onClick={handleEditCosts}>Cохранить</span>}</button>
+              {editSpinner ? <Spinner top={5} left={38} /> : <span onClick={handleEditCosts}>{t('btn-save')}</span>}</button>
             <button className="btn btn-danger btn-cancel" onClick={cancelEditCosts}>
-              Отмена
+              {t('cansel-btn')}
             </button>
           </div> :
 
-          <button className="btn edit-btn btn-primary" style={{ marginRight: '10px' }} onClick={() => setEdit(true)}>Изменить</button>
+          <button className="btn edit-btn btn-primary" style={{ marginRight: '10px' }} onClick={() => setEdit(true)}>{t('btn-edit')}</button>
 
         }
         <button className="btn btn-danger btn-delete" onClick={deleteCosts}>

@@ -1,5 +1,5 @@
 export interface IAlert {
-    alertText: string;
+    alertText: string | any;
     alertStatus: string;
 }
 

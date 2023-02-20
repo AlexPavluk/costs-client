@@ -1,10 +1,13 @@
 import { useStore } from "effector-react";
+import { useTranslation } from "react-i18next";
 import { $auth, $username } from "../../context/auth";
 import { useTheme } from "../../hooks"
 import { removeUser } from "../../utils/authAlert";
+import BasicMenu from "../LanguageDropDown/LanguageDropDown";
 import './style.scss'
 
 export const Header = () => {
+  const { t } = useTranslation();
   const { switchTheme, theme } = useTheme();
   const username = useStore($username);
   const logetIn = useStore($auth);
@@ -24,7 +27,9 @@ export const Header = () => {
         >
           {theme === 'dark' ? 'Go ligth' : 'Go dark'}
         </button>
-        {logetIn && <button onClick={removeUser} className="btn btn-logout btn-primary"> Выход </button>}
+        
+        {logetIn && <button onClick={removeUser} className="btn btn-logout btn-primary"> {t("btn-logout")} </button>}
+        <BasicMenu/>
       </div>
     </header>
   )

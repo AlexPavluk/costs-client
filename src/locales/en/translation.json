@@ -1,0 +1,39 @@
+{
+    "title": "Accounting for my expenses",
+    "dont-havecosts": "There are no costs",
+    "valuts": "zlt",
+
+    "shop-input": "Where was it spent:",
+    "price-input": "How much was spent:",
+    "date-input": "When it was spent:",
+    "name-input":"Enter your name",
+    "password-input":"Enter your password",
+    "all-inputs-warn":"Fill in all fields",
+    "passw-inputs-warn":"Password must contain more than 4 characters",
+    "update-cost-alert":"The flow rate is exposed",
+    "login-alert":"The entrance is made",
+    "reg-alert":"Registration complete",
+    "create-cost-alert":"Successfully established!",
+    "delete-cost-alert":"Successfully deleted!",
+
+    "totalt-mount":"Total:",
+   
+    "btn-logout":"Log out",
+    "btn-add-cost": "Add",
+    "btn-edit": "Edit",
+    "btn-save": "Save",
+    "cansel-btn": "Cancel",
+    "login-btn": "Log in",
+    "register-btn": "To register ",
+    
+    "shop": "Shop",
+    "date": "Date",
+    "amount": "Amount",
+
+    "register-title": "Register",
+    "login-title": "Log in",
+
+    "login-ask":"No account yet?",
+    "register-ask":"Do you already have an account?"
+
+}
