@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import './style.scss'
 
 
-export default function BasicMenu() {
+export const LanguageDropDown = () => {
     const { i18n } = useTranslation();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
@@ -37,7 +37,6 @@ export default function BasicMenu() {
                 id="basic-menu"
                 anchorEl={anchorEl}
                 open={open}
-                // onChange={onClickChangeLanguage('ru')}
                 onClose={handleClose}
                 MenuListProps={{
                     'aria-labelledby': 'basic-button',

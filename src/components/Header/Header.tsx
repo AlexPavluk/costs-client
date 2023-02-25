@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { $auth, $username } from "../../context/auth";
 import { useTheme } from "../../hooks"
 import { removeUser } from "../../utils/authAlert";
-import BasicMenu from "../LanguageDropDown/LanguageDropDown";
+import { LanguageDropDown } from "../LanguageDropDown/LanguageDropDown";
 import './style.scss'
 
 export const Header = () => {
@@ -29,7 +29,7 @@ export const Header = () => {
         </button>
         
         {logetIn && <button onClick={removeUser} className="btn btn-logout btn-primary"> {t("btn-logout")} </button>}
-        <BasicMenu/>
+        <LanguageDropDown/>
       </div>
     </header>
   )
