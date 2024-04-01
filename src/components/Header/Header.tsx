@@ -19,17 +19,19 @@ export const Header = () => {
           Costs App
         </h1>
         {username.length ?
-          <h2 style={{ color: 'white' }} >{username}
-          </h2> : ''}
-        <button
-          onClick={switchTheme}
-          className={`btn btn-theme btn-${theme === 'dark' ? 'light' : 'dark'}`}
-        >
-          {theme === 'dark' ? 'Go ligth' : 'Go dark'}
-        </button>
-        
-        {logetIn && <button onClick={removeUser} className="btn btn-logout btn-primary"> {t("btn-logout")} </button>}
-        <LanguageDropDown/>
+            <h2 style={{ color: 'white' }} >{username}
+            </h2> : ''}
+        <div className="container d-flex mr-0">
+          <button
+            onClick={switchTheme}
+            className={`btn ml-2 btn-theme btn-${theme === 'dark' ? 'light' : 'dark'}`}
+          >
+            {theme === 'dark' ? 'Go ligth' : 'Go dark'}
+          </button>
+
+          {logetIn && <button onClick={removeUser} className="btn mr-0 btn-logout btn-primary"> {t("btn-logout")} </button>}
+          <LanguageDropDown />
+        </div>
       </div>
     </header>
   )
