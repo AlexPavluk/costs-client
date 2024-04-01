@@ -1,0 +1,39 @@
+{
+    "title": "Rozliczanie moich wydatków",
+    "dont-havecosts": "Nie ma żadnych kosztów",
+    "valuts": "zlt",
+
+    "shop-input": "Na co wydano:",
+    "price-input": "Ile wydano:",
+    "date-input": "Kiedy zostały wydane:",
+    "name-input":"Wpisz swoje imię ",
+    "password-input":"Wprowadź hasło",
+    "all-inputs-warn":"Wypełnij wszystkie pola",
+    "passw-inputs-warn":"Hasło musi zawierać więcej niż 4 znaki",
+    "update-cost-alert":"Wydatek został edytowany!",
+    "login-alert":"Wejście jest wykonane",
+    "reg-alert":"Registration complete",
+    "create-cost-alert":"Udało się!",
+    "delete-cost-alert":"Usunięto!",
+
+    "totalt-mount":"Łączny koszt:",
+   
+    "btn-logout":"Wylogowanie",
+    "btn-add-cost": "Dodaj",
+    "btn-edit": "Edytuj",
+    "btn-save": "Zapisz",
+    "cansel-btn": "Anuluj",
+    "login-btn": "Zaloguj się",
+    "register-btn": "Aby się zarejestrować ",
+    
+    "shop": "Nazwa sklepu",
+    "date": "Data",
+    "amount": "Kwota",
+
+    "register-title": "Rejestr",
+    "login-title": "Zaloguj się",
+
+    "login-ask":"Nie masz jeszcze konta?",
+    "register-ask":"Czy masz już konto?"
+
+}

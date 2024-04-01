@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Cookies from 'universal-cookie';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -7,6 +8,7 @@ import './style.scss'
 
 
 export const LanguageDropDown = () => {
+    const cookie = new Cookies();
     const { i18n } = useTranslation();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
@@ -18,9 +20,12 @@ export const LanguageDropDown = () => {
     };
 
     const onClickChangeLanguage = (languages: any) => {
-        console.log(languages)
-        i18n.changeLanguage(languages);
+        cookie.set('language', languages); 
+        i18n.changeLanguage(languages); 
+        return languages
     };
+
+    
 
     return (
         <div>
@@ -47,6 +52,7 @@ export const LanguageDropDown = () => {
                 <MenuItem onClick={() => onClickChangeLanguage("ro")}>Română</MenuItem>
                 <MenuItem onClick={() => onClickChangeLanguage("ru")}>Русский</MenuItem>
                 <MenuItem onClick={() => onClickChangeLanguage("ua")}>Україньська</MenuItem>
+                <MenuItem onClick={() => onClickChangeLanguage("pl")}>Polski</MenuItem>
 
             </Menu>
         </div>
