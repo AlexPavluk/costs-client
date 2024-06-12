@@ -15,13 +15,12 @@ export const Header = () => {
   return (
     <header className={`navbar navbar-dark bg-${theme === 'dark' ? 'dark' : 'primary'}`}>
       <div className="container">
-        <h1 style={{ color: 'white' }}>
+        <h1 className="title">
           Costs App
         </h1>
         {username.length ?
             <h2 style={{ color: 'white' }} >{username}
             </h2> : ''}
-        <div className="container d-flex mr-0">
           <button
             onClick={switchTheme}
             className={`btn ml-2 btn-theme btn-${theme === 'dark' ? 'light' : 'dark'}`}
@@ -32,7 +31,6 @@ export const Header = () => {
           {logetIn && <button onClick={removeUser} className="btn mr-0 btn-logout btn-primary"> {t("btn-logout")} </button>}
           <LanguageDropDown />
         </div>
-      </div>
     </header>
   )
 }
