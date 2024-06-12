@@ -24,13 +24,13 @@
     "btn-save": "Zapisz",
     "cansel-btn": "Anuluj",
     "login-btn": "Zaloguj się",
-    "register-btn": "Aby się zarejestrować ",
+    "register-btn": "Kliknij by się zarejestrować ",
     
     "shop": "Nazwa sklepu",
     "date": "Data",
     "amount": "Kwota",
 
-    "register-title": "Rejestr",
+    "register-title": "Rejestracja",
     "login-title": "Zaloguj się",
 
     "login-ask":"Nie masz jeszcze konta?",
