@@ -19,16 +19,16 @@ export const Header = () => {
         {username.length ?
           <h2 style={{ color: 'white' }} >{username}
           </h2> : ''}
-        <div className="justify-content-sm-between">
+        <div className="d-flex align-items-center">
           <button
             onClick={switchTheme}
-            className={`btn ml-2 btn-theme btn-${theme === 'dark' ? 'light' : 'dark'}`}
+            className={`btn mr-2 ml-2 btn-theme btn-${theme === 'dark' ? 'light' : 'dark'}`}
           >
             {theme === 'dark' ? <img alt="Go ligth" src="/light-mode.png" /> : <img alt="Go ligth" src="/dark-mode.png" />}
           </button>
 
-          {logetIn && <button onClick={removeUser} className="btn mr-0 btn-logout btn-primary"> <img src="/logout.png" alt="Log out" /> </button>}
-          <LanguageDropDown />
+          {logetIn && <button onClick={removeUser} className="btn mr-2 btn-logout btn-primary"> <img src="/logout.png" alt="Log out" /> </button>}
+          <div className=""><LanguageDropDown /></div>
         </div>
       </div>
     </header>
