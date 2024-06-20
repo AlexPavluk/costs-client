@@ -3,7 +3,6 @@ import { $auth, $username } from "../../context/auth";
 import { useTheme } from "../../hooks"
 import { removeUser } from "../../utils/authAlert";
 import { LanguageDropDown } from "../LanguageDropDown/LanguageDropDown";
-import './style.scss'
 
 export const Header = () => {
   const { switchTheme, theme } = useTheme();
